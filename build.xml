@@ -10,12 +10,12 @@
         <delete dir="build"/>
     </target>
     <target name="tcomp">
-        <javac srcdir="test" destdir="test"/>
+        <javac includeantruntime="false" srcdir="test" destdir="test"/>
     </target>
 
     <target name="compile">
         <mkdir dir="build/classes"/>
-        <javac srcdir="src" destdir="build/classes"/>
+        <javac includeantruntime="false" srcdir="src" destdir="build/classes"/>
     </target>
     <target name="tjar" depends="tcomp">
         <jar destfile="test/hello.jar" basedir="test/hello">
